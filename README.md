@@ -1,7 +1,7 @@
 # **SolidGlowAnimation** 
 
 ![Platform](https://img.shields.io/badge/platform-Android-brightgreen)
-![Jitpack](https://img.shields.io/badge/jitpack-v1.0-brightgreen)
+![Jitpack](https://img.shields.io/badge/jitpack-v1.0.1-brightgreen)
 ![Kotlin](https://img.shields.io/badge/made%20with-Kotlin-orange)
 
 
