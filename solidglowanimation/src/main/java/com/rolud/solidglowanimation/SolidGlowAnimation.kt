@@ -40,7 +40,6 @@ class SolidGlowAnimation : FrameLayout {
         if (childCount > animatedLayers + 1) throw IllegalArgumentException("Too many views. SolidGlowAnimation can contain only one view.")
 
         val child = getChildAt(animatedLayers)
-        val lpChild = child.layoutParams
 
         animatedViews.forEachIndexed { index, _ ->
             val animatedView = getChildAt(index)
