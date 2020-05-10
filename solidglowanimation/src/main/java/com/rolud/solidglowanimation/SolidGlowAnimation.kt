@@ -92,24 +92,23 @@ class SolidGlowAnimation : FrameLayout {
                 visibility = View.GONE
             }
 
-            val actualDuration = calcDuration(index)
             val actualDelay = calcDelay(index)
             val oaScaleX = ObjectAnimator.ofFloat(cardView, "scaleX", 1f, this.scaleMax).apply {
-                duration = actualDuration
+                duration = this.duration
                 startDelay = actualDelay
                 repeatCount = ValueAnimator.INFINITE
                 repeatMode = ValueAnimator.RESTART
             }
 
             val oaScaleY = ObjectAnimator.ofFloat(cardView, "scaleY", 1f, this.scaleMax).apply {
-                duration = actualDuration
+                duration = this.duration
                 startDelay = actualDelay
                 repeatCount = ValueAnimator.INFINITE
                 repeatMode = ValueAnimator.RESTART
             }
 
             val oaAlpha = ObjectAnimator.ofFloat(cardView, "alpha", 1f, 0f).apply {
-                duration = actualDuration
+                duration = this.duration
                 startDelay = actualDelay
                 repeatCount = ValueAnimator.INFINITE
                 repeatMode = ValueAnimator.RESTART
@@ -122,19 +121,8 @@ class SolidGlowAnimation : FrameLayout {
 
     }
 
-    private fun calcDuration(actualLayer: Int): Long {
-        val duration = (this.duration - this.duration * 0.3 * actualLayer).toLong()
-        Log.v("SolidGlowAnimation", " duration layer $actualLayer : $duration")
-        return this.duration
-    }
-
     private fun calcDelay(actualLayer: Int): Long {
-        var delay = this.startDelay + (this.duration * 0.3 * actualLayer).toLong()
-//        for (i in 0 until actualLayer)
-//            delay += (this.duration * 0.3 * actualLayer).toLong()
-
-        Log.v("SolidGlowAnimation", " delay layer $actualLayer : $delay")
-        return delay
+        return this.startDelay + (this.duration * 0.3 * actualLayer).toLong()
     }
 
     fun startAnimation() {
