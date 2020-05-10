@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SolidGlowAnimation">
+        <attr name="layers" format="integer" />
+        <attr name="color1" format="color" />
+        <attr name="color2" format="color" />
+        <attr name="color3" format="color" />
+        <attr name="color4" format="color" />
+        <attr name="color5" format="color" />
+        <attr name="android:radius" format="dimension" />
+        <attr name="duration" format="integer" />
+        <attr name="startDelay" format="integer" />
+        <attr name="scaleMax" format="float" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,3 @@
+rootProject.name='SGAExample'
+include ':app'
+include ':solidglowanimation'
