@@ -4,7 +4,6 @@ import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
 import android.content.Context
 import android.util.AttributeSet
-import android.util.Log
 import android.view.View
 import android.widget.FrameLayout
 import androidx.cardview.widget.CardView
@@ -94,21 +93,21 @@ class SolidGlowAnimation : FrameLayout {
 
             val actualDelay = calcDelay(index)
             val oaScaleX = ObjectAnimator.ofFloat(cardView, "scaleX", 1f, this.scaleMax).apply {
-                duration = this.duration
+                duration = this@SolidGlowAnimation.duration
                 startDelay = actualDelay
                 repeatCount = ValueAnimator.INFINITE
                 repeatMode = ValueAnimator.RESTART
             }
 
             val oaScaleY = ObjectAnimator.ofFloat(cardView, "scaleY", 1f, this.scaleMax).apply {
-                duration = this.duration
+                duration = this@SolidGlowAnimation.duration
                 startDelay = actualDelay
                 repeatCount = ValueAnimator.INFINITE
                 repeatMode = ValueAnimator.RESTART
             }
 
             val oaAlpha = ObjectAnimator.ofFloat(cardView, "alpha", 1f, 0f).apply {
-                duration = this.duration
+                duration = this@SolidGlowAnimation.duration
                 startDelay = actualDelay
                 repeatCount = ValueAnimator.INFINITE
                 repeatMode = ValueAnimator.RESTART
